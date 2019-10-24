@@ -14,6 +14,7 @@ public:
     void setNext(Node* n);
     void InsertAfter(Node* nextNode);
     void printNode() const;
+    ~Node();
 
 
 private :

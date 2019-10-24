@@ -33,3 +33,7 @@ void Node::InsertAfter(Node* nextNode) {
 void Node:: printNode() const{
     cout<<this->value<<endl;
 }
+
+Node::~Node() {
+    delete next;
+}

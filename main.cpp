@@ -112,11 +112,7 @@ int main() {
 
 
     //6) delete all nodes
-    while (head != nullptr) {
-        current = head;
-        head = head->getNext();
-        delete current;
-    }
+    delete head;
 
     current=head->getNext();
     while(current!=nullptr)
