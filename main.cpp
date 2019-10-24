@@ -99,9 +99,8 @@ int main() {
 
     //4) remove the first node
 
-    current = head;
-
-    head->setNext(head->getNext());
+   current = head;
+    head = head->getNext();
     delete current;
 
     current=head->getNext();
@@ -111,6 +110,21 @@ int main() {
         current=current->getNext();
     }
 
+
     //6) delete all nodes
+    while (head != nullptr) {
+        current = head;
+        head = head->getNext();
+        delete current;
+    }
+
+    current=head->getNext();
+    while(current!=nullptr)
+    {
+        current->printNode();
+        current=current->getNext();
+    }
+
+
     return 0;
 }
